@@ -7,12 +7,9 @@ import {
     RecepteAmericano,
     RecepteEspresso,
     RecepteDoubleEspresso
-} from './coffie machine class.mjs'
+} from './coffiemachine class code.mjs'
 
 
 const firstMachine = new ThompsonMachine()
 const secondMachine = new GrundigMachine()
 const thirdMachine = new PhillipsMachine()
-
-
-firstMachine.makeEspresso()

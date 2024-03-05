@@ -10,11 +10,14 @@ class CoffieMachine {
 
     upvote () {
         this.waterAmount = this.waterСapacity
-        console.log('Бак для воды полный')         // ЗАПОЛНИ БАК С ВОДОЙ
+        console.log('Заливаем воду...')
+        setTimeout(() => console.log('Бак для воды полный'), 20000)
+        return                                                           // ЗАПОЛНИ БАК С ВОДОЙ
     }
     upvote1 () {
         this.beanAmount =  this.beanCapacity
-        console.log('Зёрна засыпаны')               // ЗАПОЛНИ БАК С КОФЕ
+        console.log('Заспыаем зерна...')
+        setTimeout(() => console.log('Зёрна зысыпаны'), 10000)            // ЗАПОЛНИ БАК С КОФЕ
     }
    downvote () {
     this.waterAmount = 0
@@ -67,7 +70,9 @@ class CoffieMachine {
     } 
 }
     offMachine () {                                                    //  Выключи кофемашину
-
+        console.log('Выключение')
+        setTimeout(() => console.log('Выключено'), 1000)
+        return
     }
 }
 
