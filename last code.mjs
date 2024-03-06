@@ -13,3 +13,5 @@ import {
 const firstMachine = new ThompsonMachine()
 const secondMachine = new GrundigMachine()
 const thirdMachine = new PhillipsMachine()
+
+firstMachine.selectElementMenu()
