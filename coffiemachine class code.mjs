@@ -29,8 +29,8 @@ class CoffieMachine {
     
 }
     showCurrWatAndCoffAmount () {
-       console.log(`${this.waterAmount}  ${this.beanAmount}`) // ПОКАЗЫВАТЬ ТЕКУЩИЙ ОБЪЕМ ВОДЫ И КОФЕ
-
+        console.log(`${this.waterAmount}  ${this.beanAmount}`) // ПОКАЗЫВАТЬ ТЕКУЩИЙ ОБЪЕМ ВОДЫ И КОФЕ
+        return
 }  
     makeAmericano() {
     const recepteAmericano = new RecepteAmericano() // ПРИГОТОВЬ АМЕРИКАНО
@@ -70,14 +70,41 @@ class CoffieMachine {
     } 
 }
     offMachine () {                                                    //  Выключи кофемашину
-        console.log('Выключение')
+        console.log('Выключение...')
         setTimeout(() => console.log('Выключено'), 1000)
         return
     }
-}
+    
+    selectElementMenu(numMenu) {
+        
+        if (numMenu <= 0 || numMenu  == null || numMenu == undefined) {
+                setInterval (() => console.log('Выберите пункт меню'), 1000)
+            } else if (numMenu == 1) {
+                return this.showCurrWatAndCoffAmount()
+            } else if (numMenu == 2) {
+                return this.makeAmericano()
+            } else if (numMenu == 3) {
+                return this.makeEspresso()
+            } else if (numMenu == 4) {
+                return this.makeDoubleEspresso()
+            } else if (numMenu == 5) {
+                return this.upvote ()
+            } else if (numMenu == 6) {
+                return this.upvote1 ()
+            } else if (numMenu == 7) {
+                return this.getInformation ()
+            } else if (numMenu == 8) {
+                return this.offMachine ()
+            }
+        }
+       
+    }
+    
+
+
 
   class ThompsonMachine extends CoffieMachine {
-    constructor(){
+    constructor() {
          super('Thompson', 1200, 150)
     }
 }
@@ -133,3 +160,5 @@ class ReceptCoffie {
         RecepteEspresso,
         RecepteDoubleEspresso
     }
+
+   
