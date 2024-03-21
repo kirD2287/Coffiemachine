@@ -1,17 +1,16 @@
 import {
-    CoffieMachine,
-    ThompsonMachine,
-    GrundigMachine,
-    PhillipsMachine,
-    ReceptCoffie,
-    RecepteAmericano,
-    RecepteEspresso,
-    RecepteDoubleEspresso
+  CoffieMachine,
+  ThompsonMachine,
+  GrundigMachine,
+  PhillipsMachine,
+  ReceptCoffie,
+  RecepteAmericano,
+  RecepteEspresso,
+  RecepteDoubleEspresso
 } from './coffiemachine class code.mjs'
 
+const Thompson = new ThompsonMachine()
+const Grundig = new GrundigMachine()
+const Phillips = new PhillipsMachine()
 
-const firstMachine = new ThompsonMachine()
-const secondMachine = new GrundigMachine()
-const thirdMachine = new PhillipsMachine()
-
-firstMachine.selectElementMenu()
+Thompson.makeAmericano()
